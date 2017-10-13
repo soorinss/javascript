@@ -2,7 +2,17 @@
 <html>
 <head>
     <script type="text/javascript">
-    var language = "javascript";
+    console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
+            //
+           var language = "javascript";
     console.log(language[0]);
     console.log(language[1]);
     console.log(language[2]);
@@ -13,6 +23,9 @@
     language[2] = 'C';
     language[3] = 'D';
     console.log(language); // javascript
+            //
+        }
+    }
     </script>
 </head>
 <body>
